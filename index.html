@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Отправка Заявки</title>
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+   <script src="fun_jq.js"></script>
+   <script src="fun_js.js"></script>
+   <link href="style.css" rel="stylesheet">
+ 
+	
+</head>
+<body>
+<div id="header"> 
+<label id="id22" onmousemove="bcd();id222.className='block1'" onmouseout="bcd1();id222.className='none1'">
+<a style="color:white; text-decoration: none" href="http://www.texkom.com.ua/" target="target">
+<p  class="block1">ООО "ТЕХКОМ - СЕРВИС"</br>     
+тел. 501-25-42</p>
+<p class="none1" id="id222" style="line-height: -5px; margin:-12%;">Посетить сайт</p></a>
+</label>
+
+
+<label id="id33" onmousemove="bcd2();id333.className='block1'" onmouseout="bcd1();id333.className='none1'">
+<a style="color:white; text-decoration: none" href="https://youcontrol.com.ua/ru/catalog/company_details/38390740/" target="target">
+<p class="block1">ООО "ТЕХСЕРВИС-ИНЖИНИРИНГ"
+тел.484-35-13</p>
+<p class="none1" id="id333" style="line-height: -5px; margin:-12%;">Посетить сайт</p></a></label></br>
+
+<label id="id11" onmousemove="bcd4();id111.className='block1'" onmouseout="bcd1();id111.className='none1'">
+<a style="color:white; text-decoration: none" href="http://algos.com.ua/" target="target">
+<p class="block1" >ООО "АЛГОС" тел.228-93-84</p>
+<p class="none1" id="id111" style="line-height: -5px; margin:-12%;">Посетить сайт</p></a></label></br>
+
+ <div id="id2224">
+ </div> 
+ 
+ </div> 
+   
+<div>
+	<form id="form">
+	<fieldset>
+	<legend>Контактные данные пользователя</legend>
+		<div class="d2">
+		<label class="class1">
+                        Фамилия*
+         </label>
+		<input type="text" name="surname" placeholder="Ваша фамилия" required pattern="[а-яА-Я]{2,}"/></div>
+    <div class="d2">
+    <label class="class1">
+                        Имя*
+         </label>
+        <input type="text" name="name" placeholder="Ваше имя" required pattern="[а-яА-Я]{2,}"/></div>
+		<div class="d3">
+		<label class="class1">
+                        Компания*
+         </label>
+         <select id="p2" style="float:right" name="select" class="class01" required onchange="className=selectedIndex?'class02':'class01'">
+                            <option class="class01" value="" disabled selected>Выберите компанию</option>
+                            <option class="class01" value="Техком-Сервис">Техком-Сервис</option>
+                            <option class="class01" value="Техсерис-Инжиниринг">Техсерис-Инжиниринг</option>
+                            <option class="class01" value="Алгос">Алгос</option>
+                            <option class="class01" value="Другая">Другая</option>
+        </select></div>
+		<div class="d2">
+		<label class="class1">
+                        Телефон +38*
+         </label>
+         <input type="text" name="phone" placeholder="0630635750" required pattern="\d{10}" /></div>
+		<div class="d2">
+		<label class="class1">
+                        Email*
+         </label>
+         <input type="email" name="email" placeholder="tcs@gmail.com" required /><br /></div>
+	</fieldset>
+
+	 <fieldset>
+                <legend>Время заполнения и выполнения</legend>
+                <div class="d3">
+                    <label style="width:40%">
+                        Укажите дату и время заполнения формы
+                    </label>
+                        <input id="time1"  style="float:right" type="time" name="timez" min="08:00" max="17:59" required="required" placeholder="08:00" pattern="^([0][8-9]|[1][0-1-2-3-4-5-6-7])(:[0-5]\d)$" />
+                        <input id="date1" style="float:right" type="date" name="datez" min="2017-04-01" required="required" placeholder="01.04.2017" pattern="(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](2017|2018|2019|2020)" />
+                     </div>
+                <div class="d3">
+                    <label style="width:40%">
+                        Укажите дату и время выполнения услуги
+                    </label >
+                        <input id="time2" style="float:right" type="time" name="timev" min="08:00" max="17:59" required="required" placeholder="17:59" pattern="^([0][8-9]|[1][0-1-2-3-4-5-6-7])(:[0-5]\d)$" />
+                        <input id="date2" style="float:right" type="date" name="datev" min="2011-03-15" required="required" placeholder="01.04.2017" pattern="(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](2017|2018|2019|2020)" />
+                   </div>
+
+            </fieldset>
+
+
+
+
+<fieldset>
+                <legend>Блок №1</legend>
+                <div class="d2">
+                    <label class="class1" style="width:30%">
+                        Объект*
+                    </label>
+                    <input style="width:67%" type="text" name="obj1" placeholder="Французкий квартал" required pattern="[\w\W]{2,}" />
+                </div>
+                <div class="d2">
+                    <label style="width:30%">
+                        Адресс*
+                    </label>
+                    <input style="width:67%" type="text" name="adress1" placeholder="г.Киев ул.Барбюса 52/1" required pattern="[\w\W]{2,}" />
+                </div>
+                <div class="d3">
+                    <label style="width:58%; float:left;">
+                        Поставленная задача
+                    </label>
+                    <select id="p3" style="float:right" class="class01" name="select1" required onchange="className=selectedIndex?'class02':'class01'">
+                        <option class="class01" value="" disabled selected>Выберите опцию</option>
+                        <option class="class01" value="Преобретение">Преобретение</option>
+                        <option class="class01" value="Транспортные услуги">Транспортные услуги</option>
+                        <option class="class01" value="Поиск изделий и материалов">Поиск изделий и материалов</option>
+                        <option class="class01" value="Другое">Другое</option>
+
+                    </select>
+                </div>
+
+                <div class="d3">
+
+                    <table border="1">
+
+                        <caption style="float:left; width:150%">Описание задачи</caption>
+                        <tr>
+                            <th style="width:16%">№ п/п</th>
+                            <th>Наименование</th>
+                            <th style="width:16%">Кол-во</th>
+                            <th style="width:16%">Цена</th>
+                        </tr>
+                        <tr>
+                        <td><input type="text" name="number1" class="d4" required  pattern="[\d]{1,}"/></td>
+                        <td><input type="text" name="description1" class="d4" required  pattern="[\w\W]{1,}"/></td>
+                        <td><input type="text" name="summ1" class="d4" required  pattern="[\d]{1,}"/></td>
+                        <td><input type="text" name="price1" class="d4" required  pattern="[\w\W]{1,}"/></td>
+                        </tr>
+                        <tr id="tr1" style="display:none">
+                        <td><input id="tr11" type="text" name="number2" class="d4" pattern="[\d]{1,}"/></td>
+                        <td><input id="tr12" type="text" name="description2" class="d4"  pattern="[\w\W]{1,}"/></td>
+                        <td><input id="tr13" type="text" name="summ2" class="d4"  pattern="[\d]{1,}"/></td>
+                        <td><input id="tr14" type="text" name="price2" class="d4" pattern="[\w\W]{1,}"/></td>
+                        </tr>
+                        <tr id="tr2" style="display:none">
+                        <td><input id="tr21" type="text" name="number3" class="d4" pattern="[\d]{1,}"/></td>
+                        <td><input id="tr22" type="text" name="description3" class="d4" pattern="[\w\W]{1,}"/></td>
+                        <td><input id="tr23" type="text" name="summ3" class="d4" pattern="[\d]{1,}"/></td>
+                        <td><input id="tr24" type="text" name="price3" class="d4" pattern="[\w\W]{1,}"/></td>
+                        </tr>
+                      
+                    </table>
+                     <div id="d1" class="d">
+
+                        <input id="tt1" class="class1" type="button" onclick="createNewChild1(1,21)" style="display:block; background-color:#dfd; border: 3px solid #096b08; border-radius: 30px/5px;" value="Добавить поле" />
+
+                        <input id="tt2" type="button" onclick="removNewChild1(1,21)" style="display:none; float:right; background-color:#febaba; border: 3px solid #096b08; border-radius: 30px/5px;" value="Убрать поле" />
+                    </div>
+                    
+                </div>
+
+
+                <div class="d2">
+                    <label class="class1">
+                        ФИО менеджера
+                    </label>
+                    <input type="text" name="manager1" placeholder="Иван" required pattern="[а-яА-Я]{2,}" />
+
+                </div>
+
+                <div class="d2">
+                    <label>
+                        Телефон +38
+                    </label>
+                    <input type="tel" name="phonemanager1" placeholder="0632232323" required pattern="\d{10}" />
+                </div>
+
+
+                <div class="d2">
+                    <label>Email</label>
+                    <input type="email" name="emailmanager1" placeholder="tcs@gmail.com" required />
+
+                </div>
+                
+
+                <div class="d2" style="margin:0% 0% 0% 1%;">
+                    <label class="class1">
+                        Кем согласовано
+                    </label>
+                    <input type="text" name="bossname1" placeholder="Шевцов" required="required" pattern="[а-яА-Я]{2,}" />
+
+                </div>
+            </fieldset>
+
+
+
+<fieldset id="h" style="display:none">
+                <legend>Блок №2</legend>
+               <div class="d2">
+                    <label class="class1" style="width:30%">
+                        Объект*
+                    </label>
+                    <input id="tr201" style="width:67%" type="text" name="obj2" placeholder="Французкий квартал" pattern="[\w\W]{2,}" />
+                </div>
+                <div class="d2">
+                    <label style="width:30%">
+                        Адресс*
+                    </label>
+                    <input id="tr202" style="width:67%" type="text" name="adress2" placeholder="г.Киев ул.Барбюса 52/1" pattern="[\w\W]{2,}" />
+                </div>
+                <div class="d3">
+                    <label style="width:58%; float:left;">
+                        Поставленная задача
+                    </label>
+                        <select id="tr203" style="float:right" class="class01" name="select2" onchange="className=selectedIndex?'class02':'class01'">
+                            <option class="class01" value="" disabled selected>Выберите опцию</option>
+                            <option class="class01" value="Преобретение">Преобретение</option>
+                            <option class="class01" value="Транспортные услуги">Транспортные услуги</option>
+                            <option class="class01" value="Поиск изделий и материалов">Поиск изделий и материалов</option>
+                            <option class="class01" value="Другое">Другое</option>
+                        </select>
+                    
+                    
+                </div>
+                <div class="d3">
+                    
+                    <table border="1">
+                      
+                        <caption style="float:left; width:150%">Описание задачи</caption>
+                        <tr>
+                            <th style="width:16%">№ п/п</th>
+                            <th>Найменование</th>
+                            <th style="width:16%">Кол-во</th>
+                            <th style="width:16%">Цена</th>
+                        </tr>
+                        <tr>
+                        <td><input id="tr204" type="text" name="number4" class="d4" pattern="[\d]{1,}"/></td>
+                        <td><input id="tr205" type="text" name="description4" class="d4" pattern="[\W\w]{1,}"/></td>
+                        <td><input id="tr206" type="text" name="summ4" class="d4" pattern="[\d]{1,}"/></td>
+                        <td><input id="tr207" type="text" name="price4" class="d4" pattern="[\W\w]{1,}" /></td>
+                        </tr>
+                        <tr id="tr3" style="display:none">
+                        <td><input id="tr31" type="text" name="number5" class="d4" pattern="[\d]{1,}"/></td>
+                        <td><input id="tr32" type="text" name="description5" class="d4" pattern="[\W\w]{1,}"/></td>
+                        <td><input id="tr33" type="text" name="summ5" class="d4" pattern="[\d]{1,}"/></td>
+                        <td><input id="tr34"  type="text" name="price5" class="d4" pattern="[\W\w]{1,}"/></td>
+                        </tr>
+                        <tr id="tr4" style="display:none">
+                        <td><input id="tr41" type="text" name="number6" class="d4" pattern="[\d]{1,}" /></td>
+                        <td><input id="tr42" type="text" name="description6" class="d4" pattern="[\W\w]{1,}" /></td>
+                        <td><input id="tr43" type="text" name="summ6" class="d4" pattern="[\d]{1,}"/></td>
+                        <td><input id="tr44"  type="text" name="price6" class="d4" pattern="[\W\w]{1,}"/></td>
+                        </tr>
+                         
+                    </table>
+
+                    <div id="d1" class="d">
+
+                        <input id="tt3" class="class1" type="button" onclick="createNewChild1(3,41)" style="display:block; background-color:#dfd; border: 3px solid #096b08; border-radius: 30px/5px;" value="Добавить поле" />
+
+                        <input id="tt4" type="button" onclick="removNewChild1(3,41)" style="display:none; float:right; background-color:#febaba; border: 3px solid #096b08; border-radius: 30px/5px;" value="Убрать поле" />
+                    </div>
+
+               </div>
+
+
+
+                <div class="d2">
+                    <label class="class1">
+                        ФИО менеджера
+                    </label>
+                    <input id="tr208" type="text" name="manager2" placeholder="Иван" pattern="[а-яА-Я]{2,}" />
+
+                </div>
+
+                <div class="d2">
+                    <label>
+                        Телефон +38
+                    </label>
+                    <input id="tr209" type="tel" name="phonemanager2" placeholder="0632232323" pattern="\d{10}" />
+                </div>
+
+
+                <div class="d2">
+                    <label>Email</label>
+                    <input id="tr210" type="email" name= "emailmanager2" placeholder="tcs@gmail.com"  />
+
+                </div>
+               
+                <div class="d2" style="margin:0% 0% 0% 1%;">
+                    <label class="class1">
+                        Кем согласовано
+                    </label>
+                    <input id="tr211" type="text" name="bossname2" placeholder="Шевцов"  pattern="[а-яА-Я]{2,}" />
+
+                </div>
+            </fieldset>
+
+
+
+<fieldset id="h1" style="display:none">
+                <legend>Блок №3</legend>
+                <div class="d2">
+                    <label class="class1" style="width:30%">
+                        Объект*
+                    </label>
+                    <input id="tr301" style="width:67%" type="text" name="obj3" placeholder="Французкий квартал" pattern="[\w\W]{2,}" />
+                </div>
+                <div class="d2">
+                    <label style="width:30%">
+                        Адресс*
+                    </label>
+                    <input id="tr302" style="width:67%" type="text" name="adress3" placeholder="г.Киев ул.Барбюса 52/1" pattern="[\w\W]{2,}" />
+                </div>
+                <div class="d3">
+                    <label>
+                        Поставленная задача
+                    </label>
+                        <select id="tr303" style="float:right"  class="class01" name="select3" onchange="className=selectedIndex?'class02':'class01'">
+                            <option class="class01" value="" disabled selected>Выберите опцию</option>
+                            <option class="class01" value="Преобретение">Преобретение</option>
+                            <option class="class01" value="Транспортные услуги">Транспортные услуги</option>
+                            <option class="class01" value="Поиск изделий и материалов">Поиск изделий и материалов</option>
+                            <option class="class01" value="Другое">Другое</option>
+                        </select>
+                   
+                </div>
+                <div class="d3">
+
+                    <table border="1">
+
+                        <caption style="float:left; width:150%">Описание задачи</caption>
+                        <tr>
+                            <th style="width:16%">№ п/п</th>
+                            <th>Найменование</th>
+                            <th style="width:16%">Кол-во</th>
+                            <th style="width:16%">Цена</th>
+                        </tr>
+                        <tr>
+                        <td><input id="tr304" type="text" name="number7" class="d4" pattern="[\d]{1,}"/></td>
+                        <td><input id="tr305" type="text" name="description7" class="d4" pattern="[\W\w]{1,}"/></td>
+                        <td><input id="tr306" type="text" name="summ7" class="d4" pattern="[\d]{1,}"/></td>
+                        <td><input id="tr307" type="text" name="price7" class="d4" pattern="[\W\w]{1,}"/></td>
+                        </tr>
+                        <tr id="tr5" style="display:none">
+                        <td><input id="tr51" type="text" name="number8" class="d4" pattern="[\d]{1,}"/></td>
+                        <td><input id="tr52" type="text" name="description8" class="d4" pattern="[\W\w]{1,}"/></td>
+                        <td><input id="tr53" type="text" name="summ8" class="d4" pattern="[\d]{1,}"/></td>
+                        <td><input id="tr54" type="text" name="price8" class="d4" pattern="[\W\w]{1,}"/></td>
+                        </tr>
+                        <tr id="tr6" style="display:none">
+                        <td><input id="tr61" type="text" name="number9" class="d4" pattern="[\d]{1,}"/></td>
+                        <td><input id="tr62" type="text" name="description9" class="d4" pattern="[\W\w]{1,}" /></td>
+                        <td><input id="tr63" type="text" name="summ9" class="d4" pattern="[\d]{1,}"/></td>
+                        <td><input id="tr64" type="text" name="price9" class="d4" pattern="[\W\w]{1,}" /></td>
+                        </tr>
+
+                    </table>
+                    <div id="d1" class="d">
+
+                        <input id="tt5" class="class1" type="button" onclick="createNewChild1(5,61)" style="display:block; background-color:#dfd; border: 3px solid #096b08; border-radius: 30px/5px;" value="Добавить поле" />
+
+                        <input id="tt6" type="button" onclick="removNewChild1(5,61)" style="display:none; float:right; background-color:#febaba; border: 3px solid #096b08; border-radius: 30px/5px;" value="Убрать поле" />
+                    </div>
+                </div>
+
+
+
+                <div class="d2">
+                    <label class="class1">
+                        ФИО менеджера
+                    </label>
+                    <input id="tr308" type="text" name="manager3" placeholder="Иван" pattern="[а-яА-Я]{2,}" />
+
+                </div>
+
+                <div class="d2">
+                    <label>
+                        Телефон +38
+                    </label>
+                    <input id="tr309" type="tel" name="phonemanager3" placeholder="0632232323" pattern="\d{10}" />
+                </div>
+
+
+                <div class="d2">
+                    <label>Email</label>
+                    <input id="tr310" type="email" name="emailmanager3" placeholder="tcs@gmail.com" />
+
+                </div>
+               
+                <div class="d2" style="margin:0% 0% 0% 1%;">
+                    <label class="class1">
+                        Кем согласовано
+                    </label>
+                    <input id="tr311" type="text" name="bossname3" placeholder="Шевцов" pattern="[а-яА-Я]{2,}" />
+
+                </div>
+
+
+            </fieldset>
+             <div id="d1" class="d">
+            
+            <input id="k1" class="class1" type="button" style=" display:block; background-color:#dfd; border: 3px solid #096b08;  border-radius: 30px/5px" value="Добавить блок" />
+            
+            <input id="k2" type="button" style="display:none; float:right; background-color:#febaba; border: 3px solid #096b08;  border-radius: 30px/5px" value="Убрать блок" />
+             </div>
+            <br>
+
+            <div id="d1" class="d">
+                    <button id="b1" style="display:block; background-color:#dfd; border: 3px solid #096b08; float:left; border-radius: 30px/5px">Отправить</button>
+                    <input id="p1" type="reset" name="reset1" style="display:block; background-color:#febaba; border: 3px solid #096b08; float:right; border-radius: 30px/5px" value="Очистить форму" />
+            </div>
+ 
+
+	</form>
+  
+	 
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	</div>
+<div id="footer"></div>
+</body>
+</html>
